@@ -21,12 +21,12 @@ matrix:
   include:
   - php: 7.2
     # env: SKELETON_VERSION="8.5.0-alpha1@dev"
-    env: SKELETON_VERSION="@alpha"
+    env: SKELETON_VERSION="*@alpha"
   allow_failures:
   - php: 7.0 # sensiolabs/security-checker 4.1.7
   - php: 7.3
   - php: nightly
-  - env: SKELETON_VERSION="@alpha"
+  - env: SKELETON_VERSION="*@alpha"
 
 before_install:
 - install --directory .travis/bin
