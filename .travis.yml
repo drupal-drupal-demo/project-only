@@ -36,6 +36,7 @@ before_install:
 - go get -u github.com/jingweno/ccat
 
 install:
+- composer config --global github-no-api
 - composer config --global github-protocols 'https'
 - composer create-project --no-install --stability=alpha --prefer-dist --repository='{"type":"vcs", "url":"https://github.com/drupal/drupal"}' drupal/drupal my-project $SKELETON_VERSION
 - cd my-project
