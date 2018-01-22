@@ -20,8 +20,8 @@ matrix:
   fast_finish: true
   include:
   - php: 7.2
-    env: SKELETON_VERSION="8.5.0-alpha1@alpha"
-    # env: SKELETON_VERSION="*@alpha"
+    # env: SKELETON_VERSION="8.5.0-alpha1@alpha"
+    env: SKELETON_VERSION="@alpha"
   allow_failures:
   - php: 7.0 # sensiolabs/security-checker 4.1.7
   - php: 7.3
@@ -38,7 +38,8 @@ before_install:
 install:
 # - composer config --global github-no-api
 # - composer config --global github-protocols 'https'
-- composer create-project --no-install --prefer-dist --repository='{"type":"vcs", "url":"https://github.com/drupal/drupal", "no-api":true}' drupal/drupal my-project $SKELETON_VERSION
+# --prefer-dist 
+- composer create-project --no-install --repository='{"type":"vcs", "url":"https://github.com/drupal/drupal", "no-api":true}' drupal/drupal my-project $SKELETON_VERSION
 - cd my-project
 - composer install
 
