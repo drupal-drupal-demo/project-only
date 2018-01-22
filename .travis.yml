@@ -38,7 +38,7 @@ before_install:
 install:
 # - composer config --global github-no-api
 # - composer config --global github-protocols 'https'
-- composer create-project --no-install --stability=alpha --prefer-dist --repository='{"type":"vcs", "url":"https://github.com/drupal/drupal", "no-api":true}' drupal/drupal my-project $SKELETON_VERSION
+- composer create-project --no-install --prefer-dist --repository='{"type":"vcs", "url":"https://github.com/drupal/drupal", "no-api":true}' drupal/drupal my-project $SKELETON_VERSION
 - cd my-project
 - composer install
 
